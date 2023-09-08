@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.checkbox_cont label{
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox_cont label svg{
+    fill: rgb(26, 231, 26);
+display: none;
+}
+
+
+.checkbox_cont input:checked~label{
+    border-color:green ;
+}
+
+.checkbox_cont:has(input:checked) label svg{
+    display: block;
+}
+
+.checkbox_cont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox_cont input{
+    display: none;
+}
+
+.checkbox_cont:has(input:checked) p{
+    color: lightgray;
+    text-decoration: line-through;
+}
